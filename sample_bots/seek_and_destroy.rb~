@@ -33,7 +33,7 @@ class SeekAndDestroy < RTanque::Bot::Brain
       @desired_heading = sensors.heading + RTanque::Heading::HALF_ANGLE
     end
     command.radar_heading = sensors.radar_heading + MAX_RADAR_ROTATION
-    command.speed = 5
+    command.speed = 1
     if @desired_heading
       command.heading = @desired_heading
       command.turret_heading = @desired_heading

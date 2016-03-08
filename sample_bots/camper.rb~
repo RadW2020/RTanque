@@ -10,6 +10,7 @@ class Camper < RTanque::Bot::Brain
   SWITCH_CORNER_TICK_RANGE = (600..1000)
 
   def tick!
+  #print "#{sefl.nearest_target}"
     self.hide_in_corners
     if (target = self.nearest_target)
       self.fire_upon(target)

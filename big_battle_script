@@ -1,0 +1,13 @@
+echo "BIG BATTLE RTANQUE"
+echo "Marksman vs Armando vs Medusa vs Gbot vs seek_and_destroy vs Armando vs Monger"
+echo "Batallas con un máximo de 100.000 ticks"
+rm outputSTATS.txt
+touch outputSTATS.txt
+
+for i in {1..100};
+	
+	do bundle exec  bin/rtanque start --gui=false --max_ticks=100000 bots/Marksman.rb bots/armando.rb bots/medusa.rb sample_bots/seek_and_destroy.rb bots/monger.rb bots/monger_circulos.rb; 
+	sleep 1s;
+	done
+ruby stats_viewer.rb
+

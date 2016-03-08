@@ -84,7 +84,7 @@ LONGDESC
     	bot.health.round(2) 
     	}
     	output.puts runner.match.bots.map { |bot| 
-    	bot.name
+    	"#{bot.name}" 
     	}
     	output.close
 			#################
